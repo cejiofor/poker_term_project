@@ -1,0 +1,32 @@
+Royal Flush
+['KH', 'JD', 'AC', 'QD', 'TH']
+
+Striaght Flush
+['4C', '8C', '6C', '7C', '5C']
+
+Four of a Kind
+['TS', '7S', 'TD', 'TH', 'TC']
+
+Full House
+['9H', '9D', '9S', 'QC', 'QH']
+
+Flush
+['3H', '4H', 'TH', 'QH', '7H']
+
+Striaght
+['TH', '6S', '8C', '9D', '7C']
+
+Three of a Kind
+['8C', '4S', '9H', '8D', '8H']
+
+Two Pair
+['9H', 'TD', 'KC', '9D', 'TS']
+
+One Pair
+['9H', '5C', '9H', 'JD', 'AH']
+
+Nothing
+['5S', 'KC', '9H', '2D', '4H']
+
+handTypeRank(hand)
+

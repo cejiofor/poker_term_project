@@ -1,0 +1,12 @@
+http://www.google.com/imgres?imgurl=http://www.rcfpoker.com/wp-content/uploads/2010/09/poker_hands.gif&imgrefurl=http://www.rcfpoker.com/%3Fpage_id%3D407&usg=__7oFQSR1vFskTo2D-w0wcIKZVHgU=&h=718&w=500&sz=42&hl=en&start=20&sig2=hnPkMIZUZsHHqlIBG4-41Q&zoom=1&tbnid=92yQ92eXIFYhWM:&tbnh=151&tbnw=105&ei=nTixTZu7ApPogQfGsrTwCw&prev=/search%3Fq%3Dpoker%2Bhands%2Bgif%26um%3D1%26hl%3Den%26sa%3DN%26biw%3D1366%26bih%3D638%26tbm%3Disch0%2C509&um=1&itbs=1&iact=hc&vpx=383&vpy=252&dur=2185&hovh=269&hovw=187&tx=82&ty=114&page=2&ndsp=19&ved=1t:429,r:8,s:20&biw=1366&bih=638
+Web URL for the file pokerHands.gif
+
+http://www.jfitz.com/cards/cards_gif.zip
+Web URl for the card file using the GIF format
+
+http://poker.about.com/od/poker101/ht/5carddraw.htm
+Web URL for more general How-to for 5 card Poker, format altered for this project
+(MOre betting rounds and opprtuintes to trade cards, direction of the game movement is different
+
+
+
