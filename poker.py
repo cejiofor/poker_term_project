@@ -6,12 +6,12 @@
 ##Written for Prinicple of Computing, 15-110 at Carnegie Mellon University
 ##Written under Professor David Kosbie and Mentor CA Kiraz Baysal
 
-from Tkinter import *
+from tkinter import *
 import random
 import handEval
 import pokerAI
-import tkSimpleDialog
-import tkMessageBox
+import tkinter.simpledialog
+import tkinter.messagebox
 
 def mousePressed(event):
     #calls the replace card funtion to turn a click
@@ -55,8 +55,8 @@ def getRandomDeck():
     prime2 = 329717
     prime3 = 611953
     seed = int(100*time.time()) % prime3
-    deck = range(52)
-    for i in range(52):
+    deck = list(range(52))
+    for i in list(range(52)):
         seed = (((seed * prime1) + (seed * seed * prime2)) % prime3)
         j = i + (seed % (52 - i))
         temp = deck[j]
@@ -64,8 +64,8 @@ def getRandomDeck():
         deck[i] = temp
     result = []
     #changed the for loop to make the deck a list
-    for i in range(52):
-        result += ["23456789TJQKA"[deck[i]%13] + "CDHS"[deck[i]/13]]
+    for i in list(range(52)):
+        result += ["23456789TJQKA"[deck[i]%13] + "CDHS"[deck[i]//13]]
     return result
 
 
@@ -73,7 +73,7 @@ def getPlayerHand():
     # Gives a player a hand with 5 cards removed from the deck
     handLength = 5
     playerHand = [""]*handLength
-    for card in xrange(handLength):
+    for card in range(handLength):
         playerHand[card] = canvas.data.deck[card]
         canvas.data.deck.remove(canvas.data.deck[card])
     return playerHand
@@ -351,7 +351,7 @@ def winPoker():
             maxPlayer = player
             lastDialog4= "Winner is "+winners[maxPlayer]
         elif playRank == handEval.handRank(winPlay[maxPlayer]) and player !=0:
-            print player, maxPlayer
+            print (player, maxPlayer)
             if breakTie(winPlay[maxPlayer],winPlay[player])==False:
                 maxPlayer = player
                 lastDialog4= "Winner is "+winners[player]
@@ -396,11 +396,11 @@ def getBet(player):
     betString = ""
     message = "How Much will you Bet? (enter 0 to fold)?"
     title = "Place Your Bet"
-    newBet = tkSimpleDialog.askstring(title, message)
+    newBet = tkinter.simpledialog.askstring(title, message)
     if newBet != None:
         while newBet == '' or newBet == None:
             betString = "Bet must bet at least " +str(canvas.data.bet)
-            newBet = tkSimpleDialog.askstring(title, betString)
+            newBet = tkinter.simpledialog.askstring(title, betString)
         if newBet == '0':
             player[0] = 'fold'
             canvas.data.isBet = True 
@@ -410,7 +410,7 @@ def getBet(player):
                 while (newBet[0] not in "0123456789") or\
                       (int(newBet) < canvas.data.bet):
                     betString = "Bet must bet at least " +str(canvas.data.bet)
-                    newBet = tkSimpleDialog.askstring(title, betString) 
+                    newBet = tkinter.simpledialog.askstring(title, betString) 
             canvas.data.bet = int(newBet)
         canvas.data.isBet = True
         return True
@@ -432,7 +432,7 @@ def playPokerRound(player, cash):
         while canvas.data.doGetBet and not getBet(player) :
             message = "This will stop your game, are you sure?"
             title = "No Bet Input"
-            if (tkMessageBox.askyesno(title, message)):
+            if (tkinter.messagebox.askyesno(title, message)):
                 canvas.data.doGetBet = False
                 init()
                 redrawAll()

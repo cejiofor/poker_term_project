@@ -1,5 +1,5 @@
 Written By Christopher Ejiofor
-Written for Prinicple of Computing, 15-110 at Carnegie Mellon University
+Written for Principle of Computing, 15-110 at Carnegie Mellon University
 Written under Professor David Kosbie and Mentor CA Kiraz Baysal
 
 Poker:

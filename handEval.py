@@ -11,7 +11,7 @@ def quadsTripsPairs(faces):
     numberTrips = 0
     numberQuads = 0
     alreadyCounted = []
-    for face in xrange(len(faces)):
+    for face in range(len(faces)):
         if faces[face] not in alreadyCounted:
             count = faces.count(faces[face])
             if count == 4:
@@ -39,10 +39,10 @@ def isStraight(faces):
     sortedFaces = []
     faceInCards = 0
     for card in faceCards:
-        for face in xrange(len(faces)):
+        for face in range(len(faces)):
             if faces[face] == card:
                 sortedFaces +=[card]
-    for face in xrange(len(sortedFaces)-1):
+    for face in range(len(sortedFaces)-1):
         faceInCards = find(faceCards, sortedFaces[face])
         if sortedFaces[face] != 'A':
             if sortedFaces[face+1] != faceCards[faceInCards+1]:
@@ -70,7 +70,7 @@ def highCard(hand):
     maxIndex = 0
     index = 0
     cardLocation = 0
-    for card in xrange(len(hand)):
+    for card in range(len(hand)):
         index = find(faceCards, hand[card][0])
         if (index > maxIndex):
             maxIndex = index
@@ -82,7 +82,7 @@ def isFlush(suits):
     #Deterinmnes if there is a flush by comparing every suit to teh first one
     # If they are all the same, returns True
     count = 0
-    for suit in xrange(len(suits)):
+    for suit in range(len(suits)):
         if suits[suit] != suits[0]:
             return False
     return True
@@ -98,7 +98,7 @@ def handRank(hand):
     Strait = 5
     Trips = 4
     TwPr = 3
-    for card in xrange(len(hand)):
+    for card in range(len(hand)):
         listSuits += [hand[card][1]]
         listFaces += [hand[card][0]]
     if listFaces[0] == 'f':

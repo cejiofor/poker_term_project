@@ -34,7 +34,7 @@ def combinations(iterable, r, combos):
     n = len(pool)
     if r > n:
         return
-    indices = range(r)
+    indices = list(range(r))
     combos += [list(pool[i] for i in indices)]
     while True:
         for i in reversed(range(r)):
